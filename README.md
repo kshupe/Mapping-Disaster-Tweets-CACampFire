@@ -21,13 +21,7 @@ Due to logistical constraints of obtaining Twitter Developer API, the **[Twitter
 
 Although all tweets have the same limitation on size, tweets can vary in a number of ways, and have a wide range of characters they can contain. In measuring statistically relevant textual information within a given tweet, we removed non-alphabetical characters, removed `url`'s, and stripped away all columns except for `text`. This process was automated using a custom function for further use.
 
-### Creating Coordinates for Mapping
-
-Because of the limitations on acquiring tweet location from either the Twitter API or Twitterscraper tool, we opted to randomly generate geo-coordinates for simulating the mapping of tweet locations (by geo-coordinate location) for our proof of concept.
-
-A random cluster of coordinate positions was created around the coordinates for Paradise, Ca. Any cluster can be created by entering into the function the `number of coordinates to generate`, the `center around which to cluster`, and the `radius of the cluster`. The `coords_dict` dictionary contains several latitude / longitude coordinates wihtin the area of the Camp Fire wildfire, of which can be updated to reflect a clustering in another location.
-
-ArcGIS is a powerful visualization tool that works well with `geopandas`. Once the coordinates were generated and assigned to the dataframes containing the `urgent` and `non_urgent` classified tweets, the respective dataframes were passed into a `GeoDataFrame`. This transformed the randomly generated coordinates into a geopandas `geometry` compatible for layering in ArcGIS.
+### EDA 
 
 ### Model 1: Preparation for Bag of Words
 Countless tweets are posted during disaster situations, in order to understand and provide greater context for emergency responders, we decided to model using a bag of words approach to classify tweets are being urgent or non-urgent.
@@ -42,6 +36,14 @@ An advanced Neural Network (words2vec) was applied to classify if the language i
 This model allows us to compare similarities between language vectors to provide deeper understanding of our documents and corpus. Using this model, cosine similarity scores are extracted, these scores represent the measure of the angle between the two compared language vectors. For example, one vector was created for each tweet, one vector was created for the urgent bag of words, and one for the non-urgent bag of words. During analysis, a cosine similarity score is created for the angle between the tweet vector and the urgent bag of words vector as well as another cosine similarity score to measure the angle between that same tweet and the non-urgent bag of words vector.
 
 Next, the two cosine similarity scores for each tweet are compared, and the tweet is then classified into the bag of words vector which it is most similar to. After modeling, a dataframe is populated with each tweet, it's two associated cosine similarity scores, and it's classification (1 for urgent, and 0 for non-urgent)
+
+### Creating Coordinates for Mapping
+
+Because of the limitations on acquiring tweet location from either the Twitter API or Twitterscraper tool, we opted to randomly generate geo-coordinates for simulating the mapping of tweet locations (by geo-coordinate location) for our proof of concept.
+
+A random cluster of coordinate positions was created around the coordinates for Paradise, Ca. Any cluster can be created by entering into the function the `number of coordinates to generate`, the `center around which to cluster`, and the `radius of the cluster`. The `coords_dict` dictionary contains several latitude / longitude coordinates wihtin the area of the Camp Fire wildfire, of which can be updated to reflect a clustering in another location.
+
+ArcGIS is a powerful visualization tool that works well with `geopandas`. Once the coordinates were generated and assigned to the dataframes containing the `urgent` and `non_urgent` classified tweets, the respective dataframes were passed into a `GeoDataFrame`. This transformed the randomly generated coordinates into a geopandas `geometry` compatible for layering in ArcGIS.
 
 ### Summary
 The power of social media to connect and amplify messages can never be underestimated, especially in disaster situations. The ability to collect, process, classify by urgency and map tweets during situations can lead to more efficient and successful emergency response efforts.
