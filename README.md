@@ -1,4 +1,7 @@
-# Client Project
+# Leveraging Social Media to Map Disasters
+<p align="center">
+  <img width="320" height="260" src="https://ya-webdesign.com/images/twitter-clipart-11.png">
+</p>
 
 #### Mike Laccavole, Patrick McCaul, Kathryn Shupe
 
