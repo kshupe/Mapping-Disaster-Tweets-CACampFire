@@ -1,0 +1,78 @@
+The contents of this repo were put together by Mike Laccavole for a project through General Assembly's Data Science Immersive program. This project was completed in conjunction with Kathryn Shupe and Patrick McCaul.
+
+The project we worked on was a proof on concept for mapping natural disasters using social media posts, and determining which of those posts are classified as "urgent or "not urgent". 
+
+
+
+Contained in this sub-repo is the following: 
+
+
+    1. A Python notebook called "Tweets EDA"
+
+    2. A folder called "csv_files"
+
+    3. A folder called "other"
+    
+    4. This README text file
+
+ 
+ Here's a brief description of each component:
+ 
+ 
+
+1. Python notebook called "Tweets EDA"
+
+
+
+This notebook contains some intial cleaning and processing of the social media posts we used in our model. It contains functions that tokenize all the documents within the corpus, visuals of the most commonly used words (both accounting and not accounting for stop words), a function that lemmatizes the tweets, and a functions that stems the tweets.
+
+
+
+2. A folder called "csv_files"
+
+
+
+This folder contains both inupts and outputs of the Python notebook called "Tweets EDA". This includes df.csv, the intial file used in the processing and EDA functions, tweets_tokenized, tweets_lemmatized, and tweets_stemmed, a csv of the most commonly used words in the posts and their respective counts, and a csv of the most commonly used words in the posts and their respective counts with stop words removed.
+
+
+
+3. A folder called "Other"
+
+
+
+This is basically a "scrap" folder of methods/routes/inputs/outputs that we had experimented with, but that ultimately weren't included in our final project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
