@@ -22,6 +22,7 @@ Due to logistical constraints of obtaining Twitter Developer API, the **[Twitter
 Although all tweets have the same limitation on size, tweets can vary in a number of ways, and have a wide range of characters they can contain. In measuring statistically relevant textual information within a given tweet, we removed non-alphabetical characters, removed `url`'s, and stripped away all columns except for `text`. This process was automated using a custom function for further use.
 
 ### EDA 
+In order to make our models, we had to further process the social media posts properly and conduct some exploratory data analysis. We created functions that tokenize all the documents within the corpus, that lemmatize the tweets, and that stems the tweets. All 3 were saved to csv files so we could conduct seperate model generation processes to see which method would be the most accurate. We also visualized the most commonly used words (both accounting and not accounting for stop words) to see which words were being used the most frequently in the relevant social media posts.
 
 ### Model 1: Preparation for Bag of Words
 Countless tweets are posted during disaster situations, in order to understand and provide greater context for emergency responders, we decided to model using a bag of words approach to classify tweets are being urgent or non-urgent.
