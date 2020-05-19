@@ -1,9 +1,10 @@
 # Leveraging Social Media to Map Disasters
+### Data Science Immersive Project 5
 <p align="center">
   <img width="260" height="180" src="https://ya-webdesign.com/images/twitter-clipart-11.png">
 </p>
 
-#### Mike Laccavole, Patrick McCaul, Kathryn Shupe
+#### By Mike Laccavole, Patrick McCaul, Kathryn Shupe
 
 ### Data Dictionary
 
